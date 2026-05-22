@@ -1,5 +1,9 @@
 # bintxt_ui
 
+<p align="center">
+  <img src="logo.png" width="160" alt="bintxt_ui logo"/>
+</p>
+
 **Standalone GUI for the [bintxt](https://github.com/NathanTrudeau/bintxt) binary ↔ text pipeline.**
 
 Open any repo folder that uses `bintxt_cfg.yaml`, perform pack/unpack/verify operations via button presses, and manage branches and tags — all without touching the terminal.
@@ -10,7 +14,7 @@ Designed for engineers version-controlling binary config files per SOC serial nu
 
 ## Status
 
-🚧 **In development — scaffold only.**
+🚧 **In active development — Phase 1 UI complete.**
 
 ---
 
@@ -38,6 +42,26 @@ git submodule update --init --recursive
 ```bash
 python main.py
 ```
+
+## Build Executable
+
+Produces a single-file executable — no Python install required on target machines.
+
+**Windows:**
+```bat
+pip install pyinstaller
+build.bat
+# Output: dist\bintxt_ui.exe
+```
+
+**Linux / macOS:**
+```bash
+pip install pyinstaller
+./build.sh
+# Output: dist/bintxt_ui
+```
+
+> PyInstaller is a **build-time** dependency only. The app itself requires no pip installs at runtime (stdlib + tkinter).
 
 ---
 

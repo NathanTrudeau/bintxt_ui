@@ -1,7 +1,7 @@
 # bintxt_ui
 
 <p align="center">
-  <img src="logo.png" width="160" alt="bintxt_ui logo"/>
+  <img src="logo.png" width="400" alt="bintxt_ui logo"/>
 </p>
 
 **Standalone GUI for the [bintxt](https://github.com/NathanTrudeau/bintxt) binary ↔ text pipeline.**

@@ -1,0 +1,3 @@
+[submodule "bintxt"]
+	path = bintxt
+	url = https://github.com/NathanTrudeau/bintxt.git

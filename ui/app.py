@@ -179,8 +179,6 @@ class App(tk.Tk):
         self.title(f"bintxt_ui — {short}")
 
         if self.repo.is_fresh:
-            self._init_btn.pack(side="left", padx=2, pady=6, after=self._init_btn)
-            # Re-pack to show it
             self._show_init_btn()
             self.set_status(f"Fresh repo: {self.repo_path}  —  click ⚡ Initialize to get started")
             self.log_panel.info(f"Opened: {self.repo_path}")

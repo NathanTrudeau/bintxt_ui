@@ -208,7 +208,8 @@ class DetailPanel(tk.Frame):
 
     def _load_labels_table(self, labels: list[dict]):
         self._labels_tree.delete(*self._labels_tree.get_children())
-        for lbl in sorted(labels, key=lambda l: int(l.get('address', 0))):
+        valid = [l for l in labels if isinstance(l, dict)]
+        for lbl in sorted(valid, key=lambda l: int(l.get('address', 0))):
             addr = int(lbl.get('address', 0))
             name = lbl.get('label', '')
             self._labels_tree.insert("", "end",

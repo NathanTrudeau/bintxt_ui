@@ -203,7 +203,9 @@ class RepoManager:
 
     def get_labels(self, filename: str) -> list[dict]:
         entry = self.get_entry(filename)
-        return list(entry.get('labels') or []) if entry else []
+        raw = list(entry.get('labels') or []) if entry else []
+        # Normalize: skip any non-dict items (e.g. plain strings from manually-authored YAML)
+        return [l for l in raw if isinstance(l, dict)]
 
     # ── Mutations ─────────────────────────────────────────────────────────────
 
